@@ -19,7 +19,6 @@ def _d8_flowdir_numba(dem, dx, dy, dirmap, nodata_cells, nodata_out, flat=-1, pi
     row_offsets = np.array([-1, -1, 0, 1, 1, 1, 0, -1])
     col_offsets = np.array([0, 1, 1, 1, 0, -1, -1, -1])
     distances = np.array([dy, dd, dx, dd, dy, dd, dx, dd])
-    print("FLOW")
     for i in prange(m):
         for j in prange(n):
             if not nodata_cells[i, j]:
